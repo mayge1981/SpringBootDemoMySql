@@ -1,0 +1,21 @@
+{
+    "name":"SpringBootDemoMySql"
+    , "build": {
+        "dockerfile": "Dockerfile"
+    }
+	, "forwardPorts": [
+		8080
+	]
+	,"extensions": [
+		"vscjava.vscode-java-pack",
+		"vscjava.vscode-lombok",
+		"Pivotal.vscode-boot-dev-pack",
+		"mutantdino.resourcemonitor",
+		"cweijan.vscode-mysql-client2"
+	]
+	
+	, "mounts": [
+		"source=/home/${localEnv:USER},target=/home/${localEnv:USER},type=bind,consistency=cached"
+	]
+
+}
